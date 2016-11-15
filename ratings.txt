@@ -1,0 +1,25 @@
+#User|Item|Rating
+A a 4
+A b 5
+A c 0
+A d 5
+A e 1
+A f 0
+A g 3
+A h 2
+B a 0
+B b 3
+B c 4
+B d 3
+B e 1
+B f 2
+B g 1
+B h 0
+C a 2
+C b 0
+C c 1
+C d 3
+C e 0
+C f 4
+C g 5
+C h 3
