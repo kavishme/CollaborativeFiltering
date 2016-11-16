@@ -13,13 +13,14 @@ LOWEST_RATE = 1
 FILE_NAME = "ratings.txt"
 HIGH_RATINGS = [3,4,5]
 LOW_RATINGS = [1,2]
-SEP = 135
+SEP = 100
 fformat = '.3f'
 
 def printJD(res):
 	print("The Jaccard distance of all pairs is:")
 	for grp in res:
-		print(grp, "Jaccard Similarity:", format(float(res[grp][0]/res[grp][1]), fformat), "Jaccard Distance:", format(float((res[grp][1] - res[grp][0])/res[grp][1]), fformat), sep='\t')
+		print(grp, "Jaccard Similarity:", format(float(res[grp][0]/res[grp][1]), fformat),
+		 "Jaccard Distance:", format(float((res[grp][1] - res[grp][0])/res[grp][1]), fformat), sep='\t')
 	print('\n')
 
 def printCD(res):
