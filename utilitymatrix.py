@@ -19,7 +19,8 @@ fformat = '.3f'
 def printJD(res):
 	print("The Jaccard distance of all pairs is:")
 	for grp in res:
-		print(grp, "Jaccard Similarity:", format(float(res[grp][0]/res[grp][1]), fformat), "Jaccard Distance:", format(float((res[grp][1] - res[grp][0])/res[grp][1]), fformat), sep='\t')
+		print(grp, "Jaccard Similarity:", format(float(res[grp][0]/res[grp][1]), fformat), "Jaccard Distance:", 
+			format(float((res[grp][1] - res[grp][0])/res[grp][1]), fformat), sep='\t')
 	print('\n')
 
 def printCD(res):
@@ -33,12 +34,11 @@ def printMat(mat):
 	
 	for user in mat:
 		ratings['cols'] = [item for item in mat[user]]
-		ratings['cols'] = '  \t|\t   '.join(ratings['cols'])
+		ratings['cols'] = '\t|\t'.join(ratings['cols'])
 		break
 
 	for user in mat:
-		#ratings[user] = [str(format(mat[user][item], fformat)) if mat[user][item] is not 0 else ' ' for item in mat[user]]
-		ratings[user] = [str(format(mat[user][item], fformat)) for item in mat[user]]
+		ratings[user] = [str(format(mat[user][item], fformat)) if mat[user][item] is not 0 else ' ' for item in mat[user]]
 		ratings[user] = '\t|\t'.join(ratings[user])
 
 	print('='*SEP)
